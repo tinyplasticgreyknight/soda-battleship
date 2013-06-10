@@ -32,11 +32,10 @@ if guess_row == ship_row and guess_col == ship_col:
     print "Congratulations! You sank my battleship!"
 elif board[int(guess_row)][int(guess_col)] == "X":
     print "You guessed that one already."
+elif guess_row < 0 or guess_row > BOARDH-1 or guess_col < 0 or guess_col > BOARDW-1:
+    print "Oops, that's not even in the ocean."
 else:
-    if guess_row < 0 or guess_row > BOARDH-1 or guess_col < 0 or guess_col > BOARDW-1:
-        print "Oops, that's not even in the ocean."
-    else:
-        print "You missed my battleship!"
-        board[int(guess_row)][int(guess_col)] = "X"
-        print_board(board)
-    
+    print "You missed my battleship!"
+    board[int(guess_row)][int(guess_col)] = "X"
+    print_board(board)
+
