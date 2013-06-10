@@ -30,7 +30,7 @@ print ship_col
 # Write your code below!
 if guess_row == ship_row and guess_col == ship_col:
     print "Congratulations! You sank my battleship!"
-elif board[int(guess_row)][int(guess_col)] == "X":
+elif board[guess_row][guess_col] == "X":
     print "You guessed that one already."
 elif (0 <= guess_row < BOARDH) and (0 <= guess_col < BOARDW):
     print "You missed my battleship!"
