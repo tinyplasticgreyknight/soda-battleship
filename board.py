@@ -7,12 +7,26 @@ class Board:
 			self.grid.append(["O"] * width)
 		self.width  = width
 		self.height = height
+		self.ship_row = randint(0, height -1)
+		self.ship_col = randint(0, width -1)
 	def is_a_hit(self, row, col):
-		pass
+		if row == self.ship_row and row == self.ship_col:
+			return True
+		else:
+			self.grid[row][col] = "X"
+			return False
 	def is_in_ocean(self, row, col):
-		pass
+		if type(row) != int or type(col) != int:
+			return False 
+		if (0 <= row < self.height) and (0 <= col < self.width):
+			return True
+		else:
+			return False			   
 	def was_already_guessed(self, row, col):
-		pass
+		if self.grid[row][col] == "X":
+			return True
+		else:
+			return False
 	def to_string(self):
 		rowstrs = []
 		for row in self.grid:
