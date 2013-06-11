@@ -32,6 +32,7 @@ for turn in range(1,MAX_TURNS+1): #loop for 4 guesses
 
 	if guess_row == ship_row and guess_col == ship_col:
 		print "Congratulations! You sank my battleship!"
+		break
 	else:
 		if turn==MAX_TURNS:
 			print "*** Game Over ***"
