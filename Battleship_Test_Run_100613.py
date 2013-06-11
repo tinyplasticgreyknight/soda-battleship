@@ -23,6 +23,7 @@ for turn in range(1,MAX_TURNS+1): #loop for 4 guesses
 		elif board.was_already_guessed(guess_row, guess_col):
 			print "You guessed that one already."
 		else:
+			board.record_guess(guess_row, guess_col)
 			print "You missed my battleship!"
 			print board.to_string()
 

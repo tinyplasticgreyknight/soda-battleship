@@ -13,7 +13,6 @@ class Board:
 		if row == self.ship_row and row == self.ship_col:
 			return True
 		else:
-			self.grid[row][col] = "X"
 			return False
 	def is_in_ocean(self, row, col):
 		if type(row) != int or type(col) != int:
@@ -22,6 +21,8 @@ class Board:
 			return True
 		else:
 			return False			   
+	def record_guess(self, row, col):
+		self.grid[row][col] = "X"
 	def was_already_guessed(self, row, col):
 		if self.grid[row][col] == "X":
 			return True
