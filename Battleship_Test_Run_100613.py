@@ -2,7 +2,7 @@ from board import Board
 
 board = Board(5, 5)
 
-print board.to_string()
+print board
 
 MAX_TURNS = 4
 
@@ -25,5 +25,4 @@ for turn in range(1,MAX_TURNS+1): #loop for 4 guesses
 		else:
 			board.record_guess(guess_row, guess_col)
 			print "You missed my battleship!"
-			print board.to_string()
-
+			print board
