@@ -28,7 +28,7 @@ class Board:
 			return True
 		else:
 			return False
-	def to_string(self):
+	def __str__(self):
 		rowstrs = []
 		for row in self.grid:
 			rowstrs.append(" ".join(row))
